@@ -7,7 +7,6 @@ body{
   width: 90%;
   margin: auto;
 }
-
 .App {
   text-align: center;
 }
@@ -155,6 +154,7 @@ a{
 footer{
   background: #2C343E;
   margin-bottom:20%;
+  margin-top: 20%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -170,5 +170,41 @@ footer{
 .navigation > a{
   text-decoration: none;
   color: #83888F;
-
+}
+.about-section{
+  background: url('./assets/about/mobile/image-hero-whitecup.jpg')  no-repeat;
+  background-size: cover;
+}
+.section,.quality{
+  margin-bottom: 30%;
+}
+.quality{
+  background: url('./assets//about/mobile/bg-quality.png');
+  border-radius: 8px;
+  margin-top: -25%;
+  padding: 22px;
+}
+.headquarters{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.headquarters > p{
+  color: #2C343E;
+  margin: 0;
+}
+.location{
+	display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.about_body_text{
+  font-family: 'Barlow',serif;
+ font-size: 1em;
+ line-height: 1.625em;
+ color: #2C343E;
+ margin: 0;
+}
+.about_grid_item > img{
+  padding: 8px;
 }

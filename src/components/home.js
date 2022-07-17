@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from '../assets/shared/desktop/logo.svg';
-import hamburger from '../assets/shared/mobile/icon-hamburger.svg';
+import Header from './header'; 
 
 import Products from '../components/products';
 import danche from '../assets/home/desktop/image-danche.png';
@@ -19,19 +18,7 @@ import Footer from '../components/footer';
 export default function Home() {
     return (
         <>
-            <div className="App">
-                <header className="App-header">
-                    <>
-                        <figure>
-                            <img src={logo} alt='logo'></img>
-                        </figure>
-                    </>
-                    <>
-                        <figure>
-                            <img src={hamburger} alt='menu button'></img>
-                        </figure>
-                    </>
-                </header>
+         <Header></Header>
                 <section className='hero-section'>
                     <h1>Great coffee made simple</h1>
                     <p>Start your mornings with the world’s best coffees. Try our expertly curated artisan
@@ -79,7 +66,6 @@ export default function Home() {
 
                 </section>
                 <Footer></Footer>
-            </div>
         </>
     )
 }
