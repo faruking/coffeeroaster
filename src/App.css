@@ -133,8 +133,6 @@ h3{
   min-width: 25px;
   width: 25px;
   height: 24px;
-  display: inline-block;
-  margin-right: 16px;
 }
 .icon-facebook{
   background: url('./assets//shared/desktop/icon-facebook.svg') no-repeat;
@@ -148,15 +146,29 @@ h3{
 ul{
   list-style-type: none;
   padding: 0;
+  display: inline-flex;
+  gap: 16px;
 }
 a{
   text-transform: uppercase;
 }
 footer{
   background: #2C343E;
+  margin-bottom:20%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 54px;
+  gap: 24px;
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.navigation > a{
+  text-decoration: none;
+  color: #83888F;
+
 }

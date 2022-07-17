@@ -6,7 +6,7 @@ export default function Benefits(props){
             <figure>
                 <img src={props.image} style={{width:'50%', margin:'25%'}} alt='paper bag'></img>
             </figure>
-            <h3 style={{color:'#FEFCF7'}}>{props.heading}</h3>
+            <h3 style={{color:'#FEFCF7',fontSize:'24px'}}>{props.heading}</h3>
             <p style={{color:'#FEFCF7'}}>{props.par}</p>
         </section>
     )
