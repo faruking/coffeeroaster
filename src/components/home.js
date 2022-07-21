@@ -23,7 +23,7 @@ export default function Home() {
                     <h1>Great coffee made simple</h1>
                     <p>Start your mornings with the world’s best coffees. Try our expertly curated artisan
                         coffees from our best roasters delivered directly to your door, at your schedule.</p>
-                    <button className='create-plan-btn'>Create your plan</button>
+                    <button className='create-plan-btn' onClick={function(){window.location.href='/subscribe'}}>Create your plan</button>
                 </section>
                 <section className='products-area'>
                     <h1 className='our_collection'>Our collection</h1>
@@ -62,7 +62,7 @@ export default function Home() {
 
                         </HowItWorks>
                     </section>
-                    <button className='create-plan-btn' style={{ margin: '10%' }}>Create your plan</button>
+                    <button className='create-plan-btn' style={{ margin: '10%' }} onClick={function(){window.location.href='/subscribe'}}>Create your plan</button>
 
                 </section>
                 <Footer></Footer>

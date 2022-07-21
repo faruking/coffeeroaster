@@ -7,6 +7,9 @@ body{
   width: 90%;
   margin: auto;
 }
+figure{
+  margin: 0;
+}
 .App {
   text-align: center;
 }
@@ -21,13 +24,37 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  margin: 5% 0;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  margin-top: -4px;
+  z-index: 99;
+  gap: 24px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(white 50%, transparent);
+  height: 100vh;
+  position: fixed;
+}
+.menu > a{
+font-family: 'Fraunces 9pt';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+color: #333D4B;
+text-decoration: none;
+
 }
 .hero-section{
   background: url('./assets/home/mobile/image-hero-coffeepress.jpg');
@@ -44,7 +71,6 @@ body{
 	border-radius: 6px;
 	border:none;
 	font-family: 'Fraunces',serif;
-  font-family: Fraunces 9pt;
 font-size: 18px;
 font-weight: 900;
 line-height: 25px;
@@ -207,4 +233,98 @@ footer{
 }
 .about_grid_item > img{
   padding: 8px;
+}
+.subscribe-section{
+  background: url('./assets/plan/mobile/image-hero-blackcup.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.subscribe_grid{
+  background: #2C343E;
+  margin: 10% -5% 10% -5% ;
+  border-radius: 8px;
+  padding: 10%;
+}
+.first-flex{
+  display: flex;
+  text-align: start;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+
+}
+.first-flex > div > figure{
+  margin: 0;
+}
+.first-flex > div > h2{
+  color: #83888F;
+  margin: 0;
+  width: 70%;
+}
+.card{
+  margin-bottom: 16px;
+}
+.card-text{
+  margin-bottom: 0;
+  color: inherit;
+}
+.card-title{
+font-family: 'Fraunces 9pt';
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 32px;
+}
+.card-body{
+  background: #F4F1EB;
+  color: #333D4B;
+  padding: 7%;
+  text-align: start;
+  border-radius:8px ;
+}
+.summary{
+  background: url('./assets/plan/desktop/bg-order-summary.png') no-repeat;
+  background-size: cover;
+  margin-top: 56px;
+  padding: 24PX;color: white;
+  text-align: start;
+  border-radius: 8px;
+}
+article{
+  font-family: 'Fraunces 9pt';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 40px;
+  color: #83888F;
+}
+.bold_green{
+  color: #0E8784;
+}
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #000000bf;
+}
+.order_summary{
+  background: #fff;
+  display: grid;
+  padding: 16px;
+  gap: 24px;
+  text-align: start;
+  margin: 24px;
+}
+.order_summary > h2{
+  /* margin: 0; */
+}
+.order-summary-bg{
+  background: #333D4B;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  color:#fff;
+  margin:-16px -16px 0;
 }
