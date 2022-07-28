@@ -73,7 +73,6 @@ export default function Home() {
                     </HowItWorks>
                 </section>
                 <button className='create-plan-btn left' onClick={function () { window.location.href = '/subscribe' }}>Create your plan</button>
-
             </section>
             <br />
             <Footer ></Footer>
