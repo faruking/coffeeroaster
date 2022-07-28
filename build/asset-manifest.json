@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fabf47b2.css",
+    "main.js": "/static/js/main.b10bce16.js",
+    "static/js/787.f9d6920e.chunk.js": "/static/js/787.f9d6920e.chunk.js",
+    "static/media/image-hero-whitecup.jpg": "/static/media/image-hero-whitecup.531ce5f31b60be0d761f.jpg",
+    "static/media/bg-quality.png": "/static/media/bg-quality.bc64fec673a5cbc8c999.png",
+    "static/media/image-hero-coffeepress.jpg": "/static/media/image-hero-coffeepress.73479cf61bb756da988d.jpg",
+    "static/media/image-hero-blackcup.jpg": "/static/media/image-hero-blackcup.176b6072d3b058612a4e.jpg",
+    "static/media/bg-order-summary.png": "/static/media/bg-order-summary.45cf381e89d6e65d1b36.png",
+    "static/media/image-commitment.jpg": "/static/media/image-commitment.65e06aff64262f5b3f6d.jpg",
+    "static/media/image-piccollo.png": "/static/media/image-piccollo.304c8160c733287e64b9.png",
+    "static/media/image-gran-espresso.png": "/static/media/image-gran-espresso.fc5aa0dc94bebcf9c01e.png",
+    "static/media/image-planalto.png": "/static/media/image-planalto.33bcba484384d76cf45b.png",
+    "static/media/image-danche.png": "/static/media/image-danche.42b87a7401d1a9631f8a.png",
+    "static/media/image-quality.jpg": "/static/media/image-quality.e888f4e152eeb8815b3a.jpg",
+    "static/media/logo.svg": "/static/media/logo.a2512c0fbb640a4458b2d5ab3d4b0a16.svg",
+    "static/media/logo_white.svg": "/static/media/logo_white.4c03a337e6fc7659852ab762a3173655.svg",
+    "static/media/illustration-uk.svg": "/static/media/illustration-uk.ef38b5a90c8a47eb5b24b4dab61a60a5.svg",
+    "static/media/illustration-australia.svg": "/static/media/illustration-australia.090e2b81394e31428b7409623d126247.svg",
+    "static/media/icon-instagram.svg": "/static/media/icon-instagram.62df5516b7fa938d6e16.svg",
+    "static/media/icon-truck.svg": "/static/media/icon-truck.6a10e7c241bab4986c5d2bbf342cd668.svg",
+    "static/media/icon-gift.svg": "/static/media/icon-gift.611b8a07de39ff224d4e24d0744c8a7b.svg",
+    "static/media/illustration-canada.svg": "/static/media/illustration-canada.30bd34392e490497b36ee62529dd10a3.svg",
+    "index.html": "/index.html",
+    "static/media/icon-coffee-bean.svg": "/static/media/icon-coffee-bean.a39b0780d7eeb72d87aa4f5a2b7f4bdf.svg",
+    "static/media/icon-twitter - pale_orange.svg": "/static/media/icon-twitter - pale_orange.1bbd69f278f1cd7ec3af.svg",
+    "static/media/icon-twitter.svg": "/static/media/icon-twitter.1bbd69f278f1cd7ec3af.svg",
+    "static/media/icon-facebook-pale_orange.svg": "/static/media/icon-facebook-pale_orange.cb7f6cf3f7ed1571b56f.svg",
+    "static/media/icon-facebook.svg": "/static/media/icon-facebook.81fb4fc16f486a210096.svg",
+    "static/media/icon-close.svg": "/static/media/icon-close.4ead4ec3073b5cd566faee8992dd1add.svg",
+    "static/media/icon-hamburger.svg": "/static/media/icon-hamburger.dfd5971a8d314a186e9f7026c53ba6c7.svg",
+    "static/media/icon-arrow.svg": "/static/media/icon-arrow.00b9181eea351d3164ce0c30c0ede72c.svg",
+    "main.fabf47b2.css.map": "/static/css/main.fabf47b2.css.map",
+    "main.b10bce16.js.map": "/static/js/main.b10bce16.js.map",
+    "787.f9d6920e.chunk.js.map": "/static/js/787.f9d6920e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fabf47b2.css",
+    "static/js/main.b10bce16.js"
+  ]
+}
