@@ -342,7 +342,8 @@ h4 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  background: url('./assets//about/mobile/bg-quality.png');
+  background: url('./assets//about/mobile/bg-quality.png') no-repeat;
+  background-size: cover;
   border-radius: 8px;
   margin-top: 35%;
   padding: 22px;
@@ -394,6 +395,7 @@ h4 {
 }
 
 li {
+  padding: 16px 0;
   font-family: 'Fraunces', serif;
   font-style: normal;
   font-weight: 900;
@@ -434,6 +436,7 @@ li>a:hover>span.num {
   display: flex;
   background: #F4F1EB;
   color: #333D4B;
+  border-radius: 5%;
 }
 
 .card-text {
@@ -450,10 +453,8 @@ li>a:hover>span.num {
 }
 
 .card-body {
-
   padding: 7%;
   text-align: start;
-  border-radius: 8px;
 }
 
 .card:hover {
@@ -565,7 +566,10 @@ article {
   .dark_grey {
     height: 573px;
   }
-
+.plan_seeker{
+  display: block;
+  margin: 48px 0;
+}
   .circle {
     width: 24px;
     height: 24px;
@@ -584,19 +588,26 @@ article {
     margin: -50vh auto auto auto;
     width: 85%;
   }
-
+  .left{
+    float: left;
+    margin-top: 48px;
+  }
+  .btn-area{
+    margin: 15% auto;
+    width: 100%;
+  }
   .benefits {
     padding: 8%;
     display: flex;
     align-items: center;
     flex-direction: row;
     text-align: start;
-    gap: 8%;
+    justify-content: center;
   }
 
-  .benefits>figure>img {
-
-    width: 100%;
+  .benefits> div >figure>img {
+    width: auto;
+    margin: 24px;
   }
 
   .text-align-start {
@@ -669,6 +680,7 @@ article {
   .cards {
     display: flex;
     gap: 2%;
+    margin: 7% 0;
   }
 
   .card-body {
@@ -677,6 +689,7 @@ article {
 
   .first-flex>div>h2 {
     width: 100%;
+    font-size: 2.8vw;
   }
 
   .container {
@@ -743,18 +756,23 @@ article {
   }
 
   .dark_grey {
-    height: 50vh;
+    height: 60vh;
   }
 
   .dark_grey>p {
     width: 65%;
     margin: auto;
+    max-width: 550px;
   }
 
   .container {
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
+  }
+  h2{
+    font-size: 40px;
+    line-height: 48px;
   }
 
   h3 {
@@ -768,10 +786,13 @@ article {
 
   .benefits {
     flex-direction: column;
-    padding: 3%;
+    padding: 5%;
     text-align: center;
   }
-
+  .btn-area{
+    width: 85%;
+  }
+  
   .btn-area.create-plan-btn {
     float: left;
     margin-left: 0;
@@ -797,10 +818,21 @@ article {
     display: flex;
     flex-direction: row-reverse;
     border-radius: 8px;
-    margin-top: 35%;
+    margin-top: 20vw;
+    margin-bottom: 10vw;
     padding: 5%;
     gap: 5vw;
+    text-align: start;
   }
+  .App > h4{
+    margin-left: 10%;
+  }
+.location{
+  width: 80%;
+    text-align: start;
+    gap: 20%;
+    margin: auto;
+}
 
   #imagequality {
     width: auto;
@@ -814,7 +846,10 @@ article {
   .grid_coffee:first-of-type {
     display: flex;
   }
-
+  .subscribe_grid {
+    width: 90%;
+    margin: 10% 0;
+}
   .ul_area {
     display: grid;
     grid-gap: 20px;
@@ -825,7 +860,6 @@ article {
     float: right;
   }
   
-
   .hr {
     width: 100%;
     border-top: 1px solid #cfcfcf;

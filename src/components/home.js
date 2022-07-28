@@ -48,7 +48,7 @@ export default function Home() {
                     <Benefits image={giftIcon} heading='Exclusive benefits' par='Special offers and swag when you subscribe, including 30% off your first shipment.'></Benefits>
                     <Benefits image={truckIcon} heading='Free shipping' par=' We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.'></Benefits>
                 </section>
-                <section className='btn-area' style={{ marginTop: '25%' }}>
+                <section className='btn-area'>
                     <h3 className='text-align-start'>How it works</h3>
                     <div className="plan_seeker">
     <div className="circle"></div>
@@ -72,10 +72,11 @@ export default function Home() {
 
                         </HowItWorks>
                     </section>
-                    <button className='create-plan-btn'  onClick={function(){window.location.href='/subscribe'}}>Create your plan</button>
+                    <button className='create-plan-btn left'  onClick={function(){window.location.href='/subscribe'}}>Create your plan</button>
 
                 </section>
-                <Footer></Footer>
+                <br/>
+                <Footer ></Footer>
         </>
     )
 }
