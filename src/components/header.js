@@ -30,19 +30,26 @@ export default function  Header(){
             </figure>
         </>
         <>
-            <figure ref={hamburgerRef}  onClick={openMenu}>
+            <figure ref={hamburgerRef}  onClick={openMenu} className='hamburger'>
                 <img src={hamburger} alt='menu button'></img>
             </figure>
             <figure  style={{display:'none'}} ref={close} onClick={closeMenu}>
                 <img src={closeButton} alt='menu button'></img>
             </figure>
         </>
+        <>
+        <nav className='navigation top-nav'>
+            <NavLink to='/'>home</NavLink>
+            <NavLink to='/about-us'>about us</NavLink>
+            <NavLink to='/subscribe'>create your plan</NavLink>
+        </nav>
+        </>
         
     </header>
-    <nav className="menu" ref={menuRef} style={{display:'none'}}>
-        <NavLink to={'/'} style={{marginTop:'15%'}}>Home</NavLink>
-        <NavLink to={'/about-us'}>About Us</NavLink>
-        <NavLink to={'/subscribe'}>Create Your Plan</NavLink>
+    <nav className="menu" ref={menuRef} style={{display:'none'}} >
+        <NavLink to={'/'} style={{marginTop:'15%'}} onClick={closeMenu}>Home</NavLink>
+        <NavLink to={'/about-us'} onClick={closeMenu}>About Us</NavLink>
+        <NavLink to={'/subscribe'} onClick={closeMenu}>Create Your Plan</NavLink>
     </nav>
         </>
       

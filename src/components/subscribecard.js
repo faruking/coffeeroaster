@@ -1,14 +1,14 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 import arrow from '../assets/plan/desktop/icon-arrow.svg';
 export default function SubscribeCard(props) {
     const cards = useRef(null);
     const firstCard = useRef(null);
     const secondCard = useRef(null);
     const thirdCard = useRef(null);
-    // const [color,setColor] = useEffect();
-    function SetColor(e) {
+
+    function setBackground(e) {
         const x = e.currentTarget.className.toString();
         if (x.includes('first')) {
             e.currentTarget.style.background = '#0E8784';
@@ -16,8 +16,8 @@ export default function SubscribeCard(props) {
             secondCard.current.style.background = '';
             secondCard.current.style.color = '';
             thirdCard.current.style.background = '';
-            thirdCard.current.style.color = '';
-            // console.log(x);
+            thirdCard.current.style.color = '';       
+            props.handleClick(props.title1);
         }
         else if (x.includes('second')) {
             e.currentTarget.style.background = '#0E8784';
@@ -26,8 +26,7 @@ export default function SubscribeCard(props) {
             firstCard.current.style.color = '';
             thirdCard.current.style.background = '';
             thirdCard.current.style.color = '';
-
-            console.log(x);
+            props.handleClick(props.title2);
         }
         else if (x.includes('third')) {
             e.currentTarget.style.background = '#0E8784';
@@ -36,10 +35,8 @@ export default function SubscribeCard(props) {
             firstCard.current.style.color = '';
             secondCard.current.style.background = '';
             secondCard.current.style.color = '';
-
-            console.log(x);
+            props.handleClick(props.title3);
         }
-
     }
     const hide = (e) => {
         const fAttribute = e.target.style.transform;
@@ -60,21 +57,21 @@ export default function SubscribeCard(props) {
                     <figure><img src={arrow} alt='dropdown' onClick={hide} /></figure>
                 </div>
             </section>
-            <section ref={cards}>
-                <Card >
-                    <Card.Body ref={firstCard} className='first' onClick={SetColor}>
+            <section ref={cards} className='cards'>
+                <Card onClick={setBackground} ref={firstCard} className='first'>
+                    <Card.Body>
                         <Card.Title>{props.title1}</Card.Title>
                         <Card.Text>{props.text1}</Card.Text>
                     </Card.Body>
                 </Card>
-                <Card >
-                    <Card.Body ref={secondCard} className='second' onClick={SetColor}>
+                <Card ref={secondCard} className='second' onClick={setBackground}>
+                    <Card.Body >
                         <Card.Title>{props.title2}</Card.Title>
                         <Card.Text>{props.text2}</Card.Text>
                     </Card.Body>
                 </Card>
-                <Card >
-                    <Card.Body ref={thirdCard} className='third' onClick={SetColor}>
+                <Card  ref={thirdCard} className='third' onClick={setBackground}>
+                    <Card.Body>
                         <Card.Title>{props.title3}</Card.Title>
                         <Card.Text>{props.text3}</Card.Text>
                     </Card.Body>

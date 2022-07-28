@@ -10,7 +10,7 @@ export default function Footer() {
             <nav className='navigation'>
                 <NavLink to='/'>home</NavLink>
                 <NavLink to='/about-us'>about us</NavLink>
-                <NavLink to='/createyourplan'>create your plan</NavLink>
+                <NavLink to='/subscribe'>create your plan</NavLink>
             </nav>
             <nav className='nav-flex'>
                 <ul>
