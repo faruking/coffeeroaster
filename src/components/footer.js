@@ -4,7 +4,7 @@ import whiteLogo from '../assets/shared/desktop/logo_white.svg'
 export default function Footer() {
     return (
         <footer>
-               <figure>
+            <figure>
                 <img src={whiteLogo} alt='company logo'></img>
             </figure>
             <nav className='navigation'>
