@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { useRef} from "react";
+import { useRef } from "react";
 import arrow from '../assets/plan/desktop/icon-arrow.svg';
 export default function SubscribeCard(props) {
     const cards = useRef(null);
@@ -16,7 +16,7 @@ export default function SubscribeCard(props) {
             secondCard.current.style.background = '';
             secondCard.current.style.color = '';
             thirdCard.current.style.background = '';
-            thirdCard.current.style.color = '';       
+            thirdCard.current.style.color = '';
             props.handleClick(props.title1);
         }
         else if (x.includes('second')) {
@@ -70,7 +70,7 @@ export default function SubscribeCard(props) {
                         <Card.Text>{props.text2}</Card.Text>
                     </Card.Body>
                 </Card>
-                <Card  ref={thirdCard} className='third' onClick={setBackground}>
+                <Card ref={thirdCard} className='third' onClick={setBackground}>
                     <Card.Body>
                         <Card.Title>{props.title3}</Card.Title>
                         <Card.Text>{props.text3}</Card.Text>

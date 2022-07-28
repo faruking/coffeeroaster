@@ -78,7 +78,8 @@ figure {
   margin-bottom: 15%;
 
 }
-.plan_seeker{
+
+.plan_seeker {
   display: none;
 }
 
@@ -291,6 +292,7 @@ button:hover {
   background: url('./assets/about/mobile/image-hero-whitecup.jpg') no-repeat;
   background-size: cover;
 }
+
 .commitment-item>figure {
   margin: 25% 0 0 0;
 }
@@ -512,7 +514,8 @@ article {
   color: #fff;
   margin: -16px -16px 0;
 }
-.checkout-flex{
+
+.checkout-flex {
   display: none;
 }
 
@@ -566,10 +569,12 @@ article {
   .dark_grey {
     height: 573px;
   }
-.plan_seeker{
-  display: block;
-  margin: 48px 0;
-}
+
+  .plan_seeker {
+    display: block;
+    margin: 48px 0;
+  }
+
   .circle {
     width: 24px;
     height: 24px;
@@ -588,14 +593,17 @@ article {
     margin: -50vh auto auto auto;
     width: 85%;
   }
-  .left{
+
+  .left {
     float: left;
     margin-top: 48px;
   }
-  .btn-area{
+
+  .btn-area {
     margin: 15% auto;
     width: 100%;
   }
+
   .benefits {
     padding: 8%;
     display: flex;
@@ -605,7 +613,7 @@ article {
     justify-content: center;
   }
 
-  .benefits> div >figure>img {
+  .benefits>div>figure>img {
     width: auto;
     margin: 24px;
   }
@@ -635,6 +643,7 @@ article {
     margin-top: 10%;
     align-items: center;
   }
+
   .commitment-item>h1 {
     font-family: 'Fraunces', serif;
     font-style: normal;
@@ -662,6 +671,7 @@ article {
   .commitment-item {
     width: 100%;
   }
+
   .location {
     flex-direction: row;
     text-align: start;
@@ -701,15 +711,18 @@ article {
 
   .order_summary {
     gap: 0;
-  width: 60vw;
+    width: 60vw;
   }
-  .checkout{
+
+  .checkout {
     display: none;
   }
-  .checkout-btn{
+
+  .checkout-btn {
     padding: 16px 64px;
   }
-  .checkout-flex{
+
+  .checkout-flex {
     width: 100%;
     justify-content: space-between;
     display: flex;
@@ -717,7 +730,8 @@ article {
     align-items: center;
 
   }
-  .amount{
+
+  .amount {
     font-family: 'Fraunces';
     font-style: normal;
     font-weight: 900;
@@ -770,7 +784,8 @@ article {
     text-align: center;
     justify-content: space-between;
   }
-  h2{
+
+  h2 {
     font-size: 40px;
     line-height: 48px;
   }
@@ -789,10 +804,11 @@ article {
     padding: 5%;
     text-align: center;
   }
-  .btn-area{
+
+  .btn-area {
     width: 85%;
   }
-  
+
   .btn-area.create-plan-btn {
     float: left;
     margin-left: 0;
@@ -814,6 +830,7 @@ article {
     background: url('./assets/about/desktop/image-hero-whitecup.jpg') no-repeat;
     background-size: cover;
   }
+
   .wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -824,15 +841,17 @@ article {
     gap: 5vw;
     text-align: start;
   }
-  .App > h4{
+
+  .App>h4 {
     margin-left: 10%;
   }
-.location{
-  width: 80%;
+
+  .location {
+    width: 80%;
     text-align: start;
     gap: 20%;
     margin: auto;
-}
+  }
 
   #imagequality {
     width: auto;
@@ -846,26 +865,30 @@ article {
   .grid_coffee:first-of-type {
     display: flex;
   }
+
   .subscribe_grid {
     width: 90%;
     margin: 10% 0;
-}
+  }
+
   .ul_area {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 2fr;
     margin: auto;
   }
+
   .disabled {
     float: right;
   }
-  
+
   .hr {
     width: 100%;
     border-top: 1px solid #cfcfcf;
   }
-  .order_summary{
+
+  .order_summary {
     width: auto;
   }
- 
+
 }

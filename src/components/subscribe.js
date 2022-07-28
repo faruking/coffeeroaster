@@ -1,4 +1,4 @@
-import React, {useRef,useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Header from "./header";
 import HowItWorksSubscribe from "./howitworks(subscribe)";
 import SubscribeCard from "./subscribecard";
@@ -6,59 +6,59 @@ import Footer from "./footer";
 
 export default function Subscribe() {
     const modalRef = useRef(null);
-    const [type,setType] = useState('______');
-    const [how,setHow] = useState('______');
-    const [quantity,setQuantity] = useState('______');
-    const [grindOptions,setGrindOptions] = useState('______');
-    const [deliveries,setDeliveries] = useState('______');
-    const [disabled,setDisabled] = useState('true');
-    useEffect(()=>{
+    const [type, setType] = useState('______');
+    const [how, setHow] = useState('______');
+    const [quantity, setQuantity] = useState('______');
+    const [grindOptions, setGrindOptions] = useState('______');
+    const [deliveries, setDeliveries] = useState('______');
+    const [disabled, setDisabled] = useState('true');
+    useEffect(() => {
         disableButton();
     });
-    let handleClick = (e)=>{
-        switch(e){
+    let handleClick = (e) => {
+        switch (e) {
             case 'Capsule':
             case 'Filter':
             case 'Espresso':
-            setHow(e);
-            disableButton();
-            break;
+                setHow(e);
+                disableButton();
+                break;
             case 'Single origin':
             case 'Decaf':
             case 'Blended':
-            setType(e);
-            disableButton();
-            break;
+                setType(e);
+                disableButton();
+                break;
             case '250g':
             case '500g':
             case '1000g':
-            setQuantity(e);
-            disableButton();
-            break;
+                setQuantity(e);
+                disableButton();
+                break;
             case 'Wholebean':
             case ' Filter':
             case 'Cafetiére':
-            setGrindOptions(e);
-            disableButton();
-            break;
+                setGrindOptions(e);
+                disableButton();
+                break;
             case 'Every week':
             case 'Every 2 weeks':
             case 'Every month':
-            setDeliveries(e);
-            disableButton();
-            break;
-            default:console.log('error!');
+                setDeliveries(e);
+                disableButton();
+                break;
+            default: console.log('error!');
         }
     };
     const disableButton = () => {
-        if(deliveries.includes('__') || type.includes('__') || how.includes('__') || quantity.includes('__') || grindOptions.includes('__') ){
+        if (deliveries.includes('__') || type.includes('__') || how.includes('__') || quantity.includes('__') || grindOptions.includes('__')) {
             setDisabled('true');
         }
-        else{
+        else {
             setDisabled('false');
         }
     }
-   
+
     const showModal = () => {
         modalRef.current.style.display = 'flex';
         document.body.style.overflow = 'hidden';
@@ -110,47 +110,47 @@ export default function Subscribe() {
                 <div className="grid_coffee">
                     <ul className="list" style={{ width: 'auto' }}>
                         <li><a href='#how'><span className="num">01 </span> Preferences</a></li>
-                        <hr className="hr"/><br />
+                        <hr className="hr" /><br />
                         <li ><a href='#type'><span className="num">02 </span> Bean type</a></li>
-                        <hr className="hr"/><br />
+                        <hr className="hr" /><br />
                         <li ><a href='#amount'><span className="num">03 </span> Quantity</a></li>
-                        <hr className="hr"/><br />
+                        <hr className="hr" /><br />
                         <li ><a href='#grind'><span className="num">04 </span> Grind option</a></li>
-                        <hr className="hr"/><br />
+                        <hr className="hr" /><br />
                         <li ><a href='#deliver'><span className="num">05 </span> Deliveries</a></li>
                     </ul>
                 </div>
                 <div className="grid_coffee" >
                     <div id='how'></div>
-                    <SubscribeCard  handleClick={handleClick}  heading='How do you drink your coffee?'
+                    <SubscribeCard handleClick={handleClick} heading='How do you drink your coffee?'
                         title1='Capsule' text1='Compatible with Nespresso systems and similar brewers'
                         title2='Filter' text2='For pour over or drip methods like Aeropress, Chemex, and V60'
                         title3='Espresso' text3='Dense and finely ground beans for an intense, flavorful experience'
                     >
                     </SubscribeCard>
                     <div id='type'></div>
-                    <SubscribeCard  handleClick={handleClick} heading='What type of coffee?'
+                    <SubscribeCard handleClick={handleClick} heading='What type of coffee?'
                         title1='Single origin' text1='Distinct, high quality coffee from a specific family-owned farm'
                         title2='Decaf' text2='Just like regular coffee, except the caffeine has been removed'
                         title3='Blended' text3='Combination of two or three dark roasted beans of organic coffees'
                     >
                     </SubscribeCard>
                     <div id='amount'></div>
-                    <SubscribeCard  handleClick={handleClick}  heading='How much would you like?' 
+                    <SubscribeCard handleClick={handleClick} heading='How much would you like?'
                         title1='250g' text1='Perfect for the solo drinker. Yields about 12 delicious cups.'
                         title2='500g' text2='Perfect option for a couple. Yields about 40 delectable cups.'
                         title3='1000g' text3='Perfect for offices and events. Yields about 90 delightful cups.'
                     >
                     </SubscribeCard>
                     <div id='grind'></div>
-                    <SubscribeCard  handleClick={handleClick} heading='Want us to grind them?'
+                    <SubscribeCard handleClick={handleClick} heading='Want us to grind them?'
                         title1='Wholebean' text1='Best choice if you cherish the full sensory experience'
                         title2=' Filter' text2='For drip or pour-over coffee methods such as V60 or Aeropress'
                         title3='Cafetiére' text3='Course ground beans specially suited for french press coffee'
                     >
                     </SubscribeCard>
                     <div id='deliver'></div>
-                    <SubscribeCard  handleClick={handleClick} heading='How often should we deliver?'
+                    <SubscribeCard handleClick={handleClick} heading='How often should we deliver?'
                         title1='Every week' text1='$14.00 per shipment. Includes free first-className shipping.'
                         title2='Every 2 weeks' text2='$17.25 per shipment. Includes free priority shipping.'
                         title3='Every month' text3='$22.50 per shipment. Includes free priority shipping.'
@@ -166,7 +166,7 @@ export default function Subscribe() {
                             sent to me <span className="bold_green" id="frequency">{deliveries}</span>.”
                         </article>
                     </section>
-                    <button className="create-plan-btn disabled" disabled={disabled==='true'}  style={{ marginTop: '56px' }} onClick={showModal} >Create my plan!</button>
+                    <button className="create-plan-btn disabled" disabled={disabled === 'true'} style={{ marginTop: '56px' }} onClick={showModal} >Create my plan!</button>
                 </div>
             </section>
 
@@ -187,7 +187,7 @@ export default function Subscribe() {
                     <div className="checkout-flex">
                         <div className="amount">$14.00/mo</div>
                         <div><button className="create-plan-btn checkout-btn" style={{ width: 'fit-content' }} >Checkout</button></div>
-                    </div> 
+                    </div>
                 </section>
             </section>
             <Footer></Footer>
