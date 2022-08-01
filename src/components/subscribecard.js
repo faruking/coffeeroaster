@@ -7,6 +7,13 @@ export default function SubscribeCard(props) {
     const firstCard = useRef(null);
     const secondCard = useRef(null);
     const thirdCard = useRef(null);
+    const arrowDown = useRef(null);
+
+    const onload = (e) => {
+        if(props.heading === 'How do you drink your coffee?'){
+            arrowDown.current.click();
+        }
+    }
 
     function setBackground(e) {
         const x = e.currentTarget.className.toString();
@@ -42,22 +49,23 @@ export default function SubscribeCard(props) {
         const fAttribute = e.target.style.transform;
         if (fAttribute === 'rotate(180deg)') {
             e.target.setAttribute("style", 'transform: rotate(0deg);transition: transform .5s;transition-timing: ease-in-out;');
-            cards.current.setAttribute("style", 'max-height:600px;transition:max-height .5s;transition-timing: ease-in-out;');
+            cards.current.setAttribute("style", 'max-height:0;transition:max-height .5s;transition-timing: ease-in-out;overflow:clip');
         }
         else {
             e.target.setAttribute("style", 'transform: rotate(180deg);transition: transform .5s;transition-timing: ease-in-out;');
-            cards.current.setAttribute("style", 'max-height:0;transition:max-height .5s;transition-timing: ease-in-out;overflow:clip');
+            cards.current.setAttribute("style", 'max-height:600px;transition:max-height .5s;transition-timing: ease-in-out;margin:7% 0');
+
         }
     }
     return (
-        <section>
+        <section  onLoad={onload}>
             <section className="first-flex" >
                 <div> <h2>{props.heading}</h2></div>
                 <div>
-                    <figure><img src={arrow} alt='dropdown' onClick={hide} /></figure>
+                    <figure><img src={arrow} alt='dropdown' ref={arrowDown}  onClick={hide} /></figure>
                 </div>
             </section>
-            <section ref={cards} className='cards'>
+            <section ref={cards} className='cards' >
                 <Card onClick={setBackground} ref={firstCard} className='first'>
                     <Card.Body>
                         <Card.Title>{props.title1}</Card.Title>

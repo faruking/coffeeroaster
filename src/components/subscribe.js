@@ -8,19 +8,56 @@ export default function Subscribe() {
     const modalRef = useRef(null);
     const [type, setType] = useState('______');
     const [how, setHow] = useState('______');
+    const [text, setText] = useState('as');
+    const [temp, setTemp] = useState('');
     const [quantity, setQuantity] = useState('______');
     const [grindOptions, setGrindOptions] = useState('______');
     const [deliveries, setDeliveries] = useState('______');
     const [disabled, setDisabled] = useState('true');
+    const grind = useRef(null);
+    const [grindText, setGrindText] = useState('ground ala');
+    const [weekly, setweekly] = useState(0.00);
+    const [biWeekly, setBiWeekly] = useState(0.00);
+    const [monthly, setMonthly] = useState(0.00);
+
+    const textweekly = `$${weekly.toFixed(2)} per shipment. Includes free first-class shipping.`;
+    const textBiWeekly = `$${biWeekly.toFixed(2)}  per shipment. Includes free priority shipping.`;
+    const textMonthly = `$${monthly.toFixed(2)}  per shipment. Includes free priority shipping.`;
+    const [monthlyTotal, setMonthlyTotal] = useState(0.00);
+
+    const eng = useRef(null);
     useEffect(() => {
         disableButton();
     });
+    const disableGrind = () => {
+        setGrindText('');
+        setTemp(grindOptions);
+        console.log(temp);
+        setGrindOptions('');
+        grind.current.style.pointerEvents = 'none';
+        grind.current.style.opacity = '0.4';
+        setText('using');
+    }
+    const enableGrind = () => {
+        grind.current.style.pointerEvents = '';
+        grind.current.style.opacity = '';
+        setGrindText('ground ala ');
+        console.log(temp);
+        setGrindOptions(temp);
+        setText('as');
+        disableButton();
+    }
     let handleClick = (e) => {
         switch (e) {
             case 'Capsule':
+                setHow(e);
+                disableGrind();
+                disableButton();
+                break;
             case 'Filter':
             case 'Espresso':
                 setHow(e);
+                enableGrind();
                 disableButton();
                 break;
             case 'Single origin':
@@ -30,10 +67,25 @@ export default function Subscribe() {
                 disableButton();
                 break;
             case '250g':
+                setQuantity(e);
+                disableButton();
+                setweekly(7.20);
+                setBiWeekly(9.60);
+                setMonthly(12.00);
+                break;
             case '500g':
+                setQuantity(e);
+                disableButton();
+                setweekly(13);
+                setBiWeekly(17.50);
+                setMonthly(22.00);
+                break;
             case '1000g':
                 setQuantity(e);
                 disableButton();
+                setweekly(22.00);
+                setBiWeekly(32.00);
+                setMonthly(42.00);
                 break;
             case 'Wholebean':
             case ' Filter':
@@ -42,21 +94,41 @@ export default function Subscribe() {
                 disableButton();
                 break;
             case 'Every week':
+                setDeliveries(e);
+                setMonthlyTotal(weekly * 4);
+                disableButton();
+                break;
             case 'Every 2 weeks':
+                setDeliveries(e);
+                setMonthlyTotal(biWeekly * 2);
+                disableButton();
+                break;
             case 'Every month':
                 setDeliveries(e);
+                setMonthlyTotal(monthly * 1);
                 disableButton();
                 break;
             default: console.log('error!');
         }
     };
     const disableButton = () => {
-        if (deliveries.includes('__') || type.includes('__') || how.includes('__') || quantity.includes('__') || grindOptions.includes('__')) {
-            setDisabled('true');
+        if (grindOptions === '') {
+            if (deliveries.includes('__') || type.includes('__') || how.includes('__') || quantity.includes('__')) {
+                setDisabled('true');
+            }
+            else {
+                setDisabled('false');
+            }
         }
         else {
-            setDisabled('false');
+            if (deliveries.includes('__') || type.includes('__') || how.includes('__') || quantity.includes('__') || grindOptions.includes('__')) {
+                setDisabled('true');
+            }
+            else {
+                setDisabled('false');
+            }
         }
+
     }
 
     const showModal = () => {
@@ -142,27 +214,27 @@ export default function Subscribe() {
                         title3='1000g' text3='Perfect for offices and events. Yields about 90 delightful cups.'
                     >
                     </SubscribeCard>
-                    <div id='grind'></div>
-                    <SubscribeCard handleClick={handleClick} heading='Want us to grind them?'
+                    <div id='grind' ref={grind}>  <SubscribeCard handleClick={handleClick} heading='Want us to grind them?'
                         title1='Wholebean' text1='Best choice if you cherish the full sensory experience'
                         title2=' Filter' text2='For drip or pour-over coffee methods such as V60 or Aeropress'
                         title3='Cafetiére' text3='Course ground beans specially suited for french press coffee'
                     >
-                    </SubscribeCard>
+                    </SubscribeCard></div>
+
                     <div id='deliver'></div>
                     <SubscribeCard handleClick={handleClick} heading='How often should we deliver?'
-                        title1='Every week' text1='$14.00 per shipment. Includes free first-className shipping.'
-                        title2='Every 2 weeks' text2='$17.25 per shipment. Includes free priority shipping.'
-                        title3='Every month' text3='$22.50 per shipment. Includes free priority shipping.'
+                        title1='Every week' text1={textweekly}
+                        title2='Every 2 weeks' text2={textBiWeekly}
+                        title3='Every month' text3={textMonthly}
                     >
                     </SubscribeCard>
                     <section className="summary" id="summary">
                         <p >ORDER SUMMARY</p>
                         <article>
-                            “I drink my coffee as <span className="bold_green" id="idmca" >{how}</span>,
+                            “I drink my coffee <span ref={eng}>{text}</span> <span className="bold_green" id="idmca" >{how}</span>,
                             with a <span className="bold_green" id="with_a">{type}</span>  type of bean.
                             <span className="bold_green" id="type_of_bean">{quantity} </span>
-                            ground ala <span className="bold_green" id="ground_ala">{grindOptions}</span>,
+                            {grindText}<span className="bold_green" id="ground_ala">{grindOptions}</span>,
                             sent to me <span className="bold_green" id="frequency">{deliveries}</span>.”
                         </article>
                     </section>
@@ -174,18 +246,18 @@ export default function Subscribe() {
                 <section className="order_summary">
                     <h2 className="order-summary-bg">Order Summary</h2>
                     <article style={{ color: '#83888F' }}>
-                        “I drink my coffee as <span className="bold_green" id="idmca">{how}</span>,
+                        “I drink my coffee <span ref={eng}>{text}</span> <span className="bold_green" id="idmca" >{how}</span>,
                         with a <span className="bold_green" id="with_a">{type}</span>  type of bean.
                         <span className="bold_green" id="type_of_bean">{quantity} </span>
-                        ground ala <span className="bold_green" id="ground_ala">{grindOptions}</span>,
+                        {grindText}<span className="bold_green" id="ground_ala">{grindOptions}</span>,
                         sent to me <span className="bold_green" id="frequency">{deliveries}</span>.”
                     </article>
                     <p style={{ color: '#333D4B' }}>
                         Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.
                     </p>
-                    <button className="create-plan-btn checkout" style={{ width: '100%' }} >Checkout - $14.00/mo</button>
+                    <button className="create-plan-btn checkout" style={{ width: '100%' }} >Checkout - ${monthlyTotal.toFixed(2)}/mo</button>
                     <div className="checkout-flex">
-                        <div className="amount">$14.00/mo</div>
+                        <div className="amount">${monthlyTotal.toFixed(2)}/mo</div>
                         <div><button className="create-plan-btn checkout-btn" style={{ width: 'fit-content' }} >Checkout</button></div>
                     </div>
                 </section>
