@@ -56,7 +56,7 @@ export default function AboutUs() {
             </section>
             <section className='wrapper'>
                 <div> <figure style={{ marginTop: '-25%' }}>
-                    <img src={imagequality} srcSet={`${imagequalityLarge} 1024w, ${imagequalityMedium} 768w, ${imagequality} 375w`} id='imagequality' alt='quality' ></img>
+                    <img src={imagequalityLarge} srcSet={`${imagequalityLarge} 1024w, ${imagequalityMedium} 768w, ${imagequality} 375w`} id='imagequality' alt='quality' ></img>
                 </figure></div>
                 <div>
                     <section className='quality'>
